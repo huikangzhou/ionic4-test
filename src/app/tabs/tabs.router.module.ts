@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+import { CatalogPage } from '../catalog/catalog.page';
+import { DiscoverPage } from '../discover/discover.page';
+import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
+import { MyOriflamePage } from '../my-oriflame/my-oriflame.page';
 
 const routes: Routes = [
   {
@@ -14,7 +16,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/tabs/(home:home)',
-        pathMatch: 'full',
+        pathMatch: 'full'
       },
       {
         path: 'home',
@@ -22,14 +24,24 @@ const routes: Routes = [
         component: HomePage
       },
       {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
+        path: 'catalog',
+        outlet: 'catalog',
+        component: CatalogPage
       },
       {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
+        path: 'discover',
+        outlet: 'discover',
+        component: DiscoverPage
+      },
+      {
+        path: 'shopping-cart',
+        outlet: 'shopping-cart',
+        component: ShoppingCartPage
+      },
+      {
+        path: 'my-oriflame',
+        outlet: 'my-oriflame',
+        component: MyOriflamePage
       }
     ]
   },

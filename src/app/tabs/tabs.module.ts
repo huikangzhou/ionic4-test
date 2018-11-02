@@ -10,6 +10,10 @@ import { TabsPage } from './tabs.page';
 import { ContactPageModule } from '../contact/contact.module';
 import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
+import { CatalogPageModule } from '../catalog/catalog.module';
+import { DiscoverPageModule } from '../discover/discover.module';
+import { ShoppingCartPageModule } from '../shopping-cart/shopping-cart.module';
+import { MyOriflamePageModule } from '../my-oriflame/my-oriflame.module';
 
 @NgModule({
   imports: [
@@ -19,7 +23,11 @@ import { HomePageModule } from '../home/home.module';
     TabsPageRoutingModule,
     HomePageModule,
     AboutPageModule,
-    ContactPageModule
+    ContactPageModule,
+    CatalogPageModule,
+    DiscoverPageModule,
+    ShoppingCartPageModule,
+    MyOriflamePageModule
   ],
   declarations: [TabsPage]
 })

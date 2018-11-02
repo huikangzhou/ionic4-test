@@ -3,28 +3,44 @@
   <ion-tab tab="home">
     <ion-router-outlet name="home"></ion-router-outlet>
   </ion-tab>
-  <ion-tab tab="about">
-    <ion-router-outlet name="about"></ion-router-outlet>
+  <ion-tab tab="catalog">
+    <ion-router-outlet name="catalog"></ion-router-outlet>
   </ion-tab>
-  <ion-tab tab="contact">
-    <ion-router-outlet name="contact"></ion-router-outlet>
+  <ion-tab tab="discover">
+    <ion-router-outlet name="discover"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab tab="shopping-cart">
+    <ion-router-outlet name="shopping-cart"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab tab="my-oriflame">
+    <ion-router-outlet name="my-oriflame"></ion-router-outlet>
   </ion-tab>
 
   <ion-tab-bar slot="bottom">
 
-    <ion-tab-button tab="home" href="/tabs/(home:home)">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Home</ion-label>
+    <ion-tab-button tab="home" href="/tabs/(home:home)" (click)="selectTab('home')">
+      <ion-icon [src]="tabsIcon.home[currentTabName === 'home' ? 'active' : 'inactive']"></ion-icon>
+      <ion-label>首页</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="about" href="/tabs/(about:about)">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
+    <ion-tab-button tab="catalog" href="/tabs/(catalog:catalog)" (click)="selectTab('catalog')">
+      <ion-icon [src]="tabsIcon.catalog[currentTabName === 'catalog' ? 'active' : 'inactive']"></ion-icon>
+      <ion-label>分类</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="contact" href="/tabs/(contact:contact)">
-      <ion-icon name="contacts"></ion-icon>
-      <ion-label>Contact</ion-label>
+    <ion-tab-button tab="discover" href="/tabs/(discover:discover)" (click)="selectTab('discover')">
+      <ion-icon [src]="tabsIcon.discover[currentTabName === 'discover' ? 'active' : 'inactive']"></ion-icon>
+      <ion-label>发现</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="shopping-cart" href="/tabs/(shopping-cart:shopping-cart)" (click)="selectTab('shopping-cart')">
+      <ion-icon [src]="tabsIcon['shopping-cart'][currentTabName === 'shopping-cart' ? 'active' : 'inactive']"></ion-icon>
+      <ion-label>购物车</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="my-oriflame" href="/tabs/(my-oriflame:my-oriflame)" (click)="selectTab('my-oriflame')">
+      <ion-icon [src]="tabsIcon['my-oriflame'][currentTabName === 'my-oriflame' ? 'active' : 'inactive']"></ion-icon>
+      <ion-label>我的</ion-label>
     </ion-tab-button>
 
   </ion-tab-bar>
